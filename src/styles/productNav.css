@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Imported;
+    src: url(../font/Quicksand-VariableFont_wght.ttf);
+}
+
+#navElements a {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    font-family: Imported;
+    font-size: 0.8rem;
+    color: silver;
+    text-decoration: none;
+}
+
+.navWrapper {
+    margin-bottom: 3vh;
+}
+.currentProduct {
+    color: black;
+}
+
