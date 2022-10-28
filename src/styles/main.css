@@ -2,12 +2,13 @@
     font-family: Imported;
     src: url(../font/Quicksand-VariableFont_wght.ttf);
 }
+
 html {
-    padding: 2vh 2vw;
+    padding: 2vh 8.6vw;
     font-family: Imported;
 }
 
-p {
+.parrafo {
     margin: 0.2rem 0 0 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
@@ -15,25 +16,40 @@ p {
     text-decoration: none;
 }
 
-#productInfo a {
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    font-family: Imported;
-    font-size: 0.8rem;
-    color: silver;
-    text-decoration: none;
-}
-
-#productPrice {
-    color: black;
-}
-
-.row {
+.fila {
     display: flex;
     flex-direction: row;
 }
-.wrapper{
-    display:flex;
-    flex-direction: column;
+
+/* Media queries */
+
+/* MOBILE 320px — 480px*/
+@media screen and (max-width: 480px) {
 }
+
+/* TABLET 481px — 768px */
+@media screen and (max-width: 768px) {
+    
+}
+
+/* SMALL SCREENS 769px — 1024 LAPTOP*/ 
+@media screen and (max-width: 1024px) {
+
+}
+
+/* DESKTOPS 1025px — 1200px */
+@media screen and (max-width: 1200px) {
+    
+}
+
+/* EXTRA LARGE SCREENS 1201px and more MONITOR*/ 
+@media screen and (min-width: 1201px) {
+}
+
+
+
+
+
+
+
 

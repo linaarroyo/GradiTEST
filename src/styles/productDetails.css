@@ -1,0 +1,47 @@
+.productDetails {
+    font-family: Imported;
+}
+
+#productPrice {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.comparePrice {
+    margin-top: 0;
+}
+
+/* Media queries */
+
+/* MOBILE 320px — 480px*/
+@media screen and (max-width: 480px) {
+    .parrafo {
+        margin-bottom: 0 !important;
+    }
+    .price .parrafo {
+        width: 20vw;
+    }
+    .price .vinculo {
+        width: 60vw;
+    }
+
+}
+
+/* TABLET 481px — 768px */
+@media screen and (max-width: 768px) {
+}
+
+/* SMALL SCREENS 769px — 1024 */
+@media screen and (max-width: 1024px) {
+}
+
+/* DESKTOPS 1025px — 1200px */
+@media screen and (max-width: 1200px) {
+}
+
+/* EXTRA LARGE SCREENS 1201px and more */
+@media screen and (min-width: 1201px) {
+}
+
+
+

@@ -3,15 +3,20 @@
     src: url(../font/Quicksand-VariableFont_wght.ttf);
 }
 
-#navElements a {
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+#navElements .vinculo {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
     font-family: Imported;
     font-size: 0.8rem;
+    font-weight: bold;
     color: silver;
     text-decoration: none;
+    transition: 0.3s;
 }
 
+#navegable:hover{
+    color: black;
+}
 .navWrapper {
     margin-bottom: 3vh;
 }

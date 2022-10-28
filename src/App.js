@@ -5,7 +5,7 @@ import Main from "./components/Main";
 
 const App = () => {
     return (
-        <div id="app">
+        <div>
             <ProductNav/>
             <Main/>
         </div>
