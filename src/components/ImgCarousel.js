@@ -8,23 +8,28 @@ import {
 } from 'reactstrap';
 import '../styles/imgCarousel.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { map } from 'lodash';
 
 const items = [
   {
     src: require("../img/tenis810-01.jpg"),
     altText: 'Slide 1',
+    captionText: ""
   },
   {
     src:  require("../img/tenis810-02.jpg"),
     altText: 'Slide 2',
+    captionText: ""
   },
   {
     src:  require("../img/tenis810-03.jpg"),
     altText: 'Slide 3',
+    captionText: ""
   },
   {
     src:  require("../img/tenis810-04.jpg"),
     altText: 'Slide 3',
+    captionText: ""
   }
 ];
 
@@ -37,6 +42,7 @@ class ImgCarousel extends Component {
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+    this.productJSON = props.productJSON;
   }
 
   onExiting() {
@@ -66,7 +72,13 @@ class ImgCarousel extends Component {
 
   render() {
     const { activeIndex } = this.state;
-
+    items = map(this.productJSON.images, image => {
+      return {
+      src:  require(image),
+      altText: "Zapato",
+      captionText: "",
+    }});
+    console.log(items);
     const slides = items.map((item) => {
       return (
         <CarouselItem
