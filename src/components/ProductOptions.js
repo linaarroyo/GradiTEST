@@ -14,7 +14,6 @@ const ProductOptions = () => {
 
     return(
         <div className="productOptions">
-            <hr/>
             <form>
                 {/*SELECT COLOR*/}
                 <div className="optionSection productColor">
@@ -32,7 +31,6 @@ const ProductOptions = () => {
                         <span className="color-3 inputColor"/>
                     </label>
                 </div>
-                <hr/>
                 {/*SELECT SIZE*/}
                 <div className="optionSection productSize">
                     <p className="parrafo">Size:</p>
@@ -49,9 +47,8 @@ const ProductOptions = () => {
                         <span id="inputTalla">8</span>
                     </label>
                 </div>
-                <hr/>
-                <div className="totalPrice fila" style={{height:"50px", display:"flex"}}>
                 {/*SELECT AMOUNT*/}
+                <div className="totalPrice fila" style={{height:"50px"}}>
                     <div className="amountProducts fila">
                         <p className="parrafo" onClick={() => setCounter((prevCount) => prevCount - 1)}>-</p>
                         <p className="parrafo">{counter}</p>
@@ -69,9 +66,9 @@ const ProductOptions = () => {
                     </div>
                 </div>
                 {/*SUBMIT FORM*/}
-                <div className="fila buttons">
-                    <button className="submitButtons favorite">Add to favourite</button>
-                    <button className="submitButtons cart">Add to cart</button>
+                <div className="row gx-1 buttons">
+                    <button className="submitButtons favorite col-md-6">Add to favourite</button>
+                    <button className="submitButtons cart col-md-6">Add to cart</button>
                 </div>
                 <p className="productDescription parrafo">
                     {productDescription}

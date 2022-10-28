@@ -1,29 +1,22 @@
-.envoltura{
-    display:flex;
-    flex-direction: column;
-}
-
-.envoltura.escritorio {
-    display: block;
-}
 .envoltura.movil {
     display: none;
 }
 /* Media queries */
-
 /* Mobile 320px — 480px*/
 @media screen and (max-width: 480px) {
-    .envoltura.escritorio {
-        display: none;
-    }
-
-    .envoltura.movil {
-        display: block;
-    }
 }
 
 /* TABLET 481px — 768px */
 @media screen and (max-width: 768px) {
+    .envoltura.escritorio {
+        display: none;
+    }
+    .envoltura.movil {
+        display:block;
+    }
+    .movil {
+        display: 100vw;
+    }
 }
 
 /* SMALL SCREENS 769px — 1024 */

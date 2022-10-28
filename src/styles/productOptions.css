@@ -1,14 +1,15 @@
 .productOptions {
     font-family: Imported;
-}
-hr {
-    margin: 1.5rem 0 0 0.5rem;
-    border-top: 0.001rem solid #eaeaea;
-    width: 30vw;
-    height: 0;
+    width: 25vw;
 }
 
-#productOptions .vinculo {
+.brand {
+    font-size: 0.8rem;
+    color: silver;
+    text-decoration: none;
+}
+
+#productInfo .vinculo {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     font-size: 0.8rem;
@@ -17,7 +18,6 @@ hr {
 }
 
 .optionSection {
-    margin-top: 1.5rem;
     display: flex;
     align-items: center;
 }
@@ -73,7 +73,19 @@ input[type="radio"] {
     border: 0.5px solid #b0b0b0;
 }
 
+.productColor {
+    border-top: 1px solid rgb(234, 234, 234);
+    border-bottom: 1px solid rgb(234, 234, 234);
+    padding: 2vh 0;
+}
+
 /*PRODUCT SIZE OPTIONS */
+
+.productSize {
+    border-bottom: 1px solid rgb(234, 234, 234);
+    padding: 2vh 0;
+
+}
 
 #inputTalla {
     color: #b5b5b5;
@@ -104,11 +116,18 @@ input[type="radio"] {
 
 /* PRODUCT AMOUNT */
 
+.totalPrice {
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(234, 234, 234);
+    padding: 2vh 0 6vh 0;
+
+
+}
 .amountProducts .parrafo {
 	background: none;
 	border: none;
 	cursor: pointer;
-    margin: 0.5rem 1rem;
+    margin: 0 1rem;
     font-size: 1rem;
     transition: 0.3s;
 }
@@ -121,32 +140,28 @@ input[type="radio"] {
     border: 1px solid #E0E0E0;
     width:fit-content;
     height: fit-content;
-    margin-left: 0.5rem;
-    margin-top: 1.5rem;
-}
-
-.amountProducts .parrafo {
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    float: left;
+    padding: 0.5vh 0;
 }
 
 .totalAmount {
-    margin-top: 1.5rem;
-    margin-left: auto;
-    order: 2;
+    float: right;
 }
 
 #totalNumber {
     font-weight:bold;
     color:black;
-    font-size:2rem;
+    font-size: 2rem;
+    margin-right: 0 !important;
 }
 
+.comparePrice {
+    margin-left: 0 !important;
+}
 /* FORM SUBMIT BUTTONS */
 
 .submitButtons {
-    margin: 5vh 0 0 0.5rem;
-    width: 15vw;
+    margin: 5vh 0 0 0;
     font-size: 1rem;
     padding: 0.7rem 0;
     font-weight: bold;
@@ -158,7 +173,6 @@ input[type="radio"] {
 .favorite {
     background-color: #f0f0f0;
     transition: 0.3s;
-
 }
 
 .cart {
@@ -179,57 +193,34 @@ input[type="radio"] {
 
 .productDescription {
     color: rgb(169, 169, 169);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-family: Imported;
     margin-top: 3vh;
-    width: 30vw;
+    width: 25vw;
 }
 
 /* Media queries */
 
 /* MOBILE 320px — 480px*/
 @media screen and (max-width: 480px) {
-    .navWrapper {
-        display: none;
-    }
+}
+
+/* TABLET 481px — 768px */
+@media screen and (max-width: 768px) {
     hr {
         width: 80vw;
     }
-
-    .productColor .inputColor {
-        display: flow-root;
-        margin-top: -15px;
+    .productOptions {
+        width: 100%;
     }
-
-    .optionSection {
-        margin-top: 0.5rem;
-    }
-
-    .productSize .inputTalla {
-        width: 40px;
-    }
-
-    .amountProducts {
-        width:30vw !important;
-        margin-left: 0.8rem !important;
-    }
-    .amountProducts .parrafo{
-        margin: 0;
-        padding: 10px 0;
-        width: 30%;
-    }
-
-    .totalAmount {
-        width: 55vw !important;
+    #totalNumber{
+        margin-left: 15px !important;
     }
     .totalAmount .vinculo {
-        width: 20vw !important;
         margin: 0 !important;
     }
-
     .submitButtons {
         margin: 0 0 0 0.5rem;
-        width: 80vw;
     } 
     .buttons {
         margin: 5vh 0 0.5vh -1vw !important;
@@ -237,16 +228,11 @@ input[type="radio"] {
     button {
         margin-bottom: 1.5vh !important;
     }
-
     .productDescription {
         width: 80vw;
         margin: 0;
         margin-left: 1vw;
     }
-}
-
-/* TABLET 481px — 768px */
-@media screen and (max-width: 768px) {
 }
 
 /* SMALL SCREENS 769px — 1024 */

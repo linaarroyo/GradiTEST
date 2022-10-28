@@ -9,7 +9,7 @@ import ImgCarousel  from "./ImgCarousel";
 const ProductImages = () => {
     return (
     <>
-    <div className="envoltura escritorio">
+    <div className="envoltura envolturaImgs escritorio col-md-6">
         <div>
             <img src={firstProductImage} width="810px" height="810px"/>
         </div>

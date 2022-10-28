@@ -19,7 +19,7 @@ const ProductDetails = () => {
     
     return (
         <div className="productDetails">
-            <a href="/" className="vinculo">{brand}</a>
+            <a href="/" className="brand">{brand}</a>
             <p className="productTitle parrafo" style={{fontWeight:"bold"}}>{productTitle}</p>
             <div className="fila price">
                 <p id="productPrice" className="parrafo">{formatNumber(price)}</p>

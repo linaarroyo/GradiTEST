@@ -5,9 +5,11 @@ import ProductInfo from "./ProductInfo";
 
 const Main = () => {
     return (
-        <div className="fila">
-            <ProductImages/>
-            <ProductInfo/>
+        <div className="container">
+            <div className="row gx-1">
+                <ProductImages/>
+                <ProductInfo/>
+            </div>
         </div>
     )
 }

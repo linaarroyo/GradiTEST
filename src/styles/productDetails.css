@@ -5,10 +5,15 @@
 #productPrice {
     color: black;
     font-size: 1.2rem;
+    margin-right: 0.5vw;
 }
 
 .comparePrice {
     margin-top: 0;
+}
+
+.price {
+    margin-bottom: 3vh;
 }
 
 /* Media queries */
@@ -24,6 +29,8 @@
     .price .vinculo {
         width: 60vw;
     }
+
+
 
 }
 
