@@ -85,7 +85,6 @@ class ImgCarousel extends Component {
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
-        style={{width: "100vw"}}
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}

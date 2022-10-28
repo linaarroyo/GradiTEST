@@ -6,6 +6,11 @@
 html {
     padding: 2vh 8.6vw;
     font-family: Imported;
+    width: 100vw;
+}
+
+.container {
+    margin: 0 !important;
 }
 
 .parrafo {
@@ -25,11 +30,16 @@ html {
 
 /* MOBILE 320px — 480px*/
 @media screen and (max-width: 480px) {  
+    html {
+        padding: 2vh 9vw !important;
+    }
 }
 
 /* TABLET 481px — 768px */
 @media screen and (max-width: 768px) {
-    
+    html {
+        padding: 2vh 4vw;
+    }
 }
 
 /* SMALL SCREENS 769px — 1024 LAPTOP*/ 

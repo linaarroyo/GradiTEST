@@ -1,5 +1,8 @@
+.carousel .slide {
+    width: 100vw !important;
+}
 .carousel-indicators {
-    margin-left: -9vw !important;
+    margin-left: 9vw !important;
 }
 
 .carousel-indicators button{
@@ -8,3 +11,4 @@
     height: 8px !important;
     width: 8px !important;
 }
+

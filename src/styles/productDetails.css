@@ -29,13 +29,13 @@
     .price .vinculo {
         width: 60vw;
     }
-
-
-
 }
 
 /* TABLET 481px — 768px */
 @media screen and (max-width: 768px) {
+    #productInfo {
+        padding-left: 3vw !important;
+    }
 }
 
 /* SMALL SCREENS 769px — 1024 */

@@ -5,7 +5,7 @@ import ProductOptions from "./ProductOptions.js";
 
 const ProductInfo = () => {
     return (
-        <div className="envoltura envolturaInfo col-md-6" id="productInfo" style={{paddingLeft:"8vw"}}>
+        <div className="envoltura envolturaInfo col-sm-6" id="productInfo" style={{paddingLeft:"8vw"}}>
             <ProductDetails/>
             <ProductOptions/>
         </div>

@@ -15,7 +15,11 @@
         display:block;
     }
     .movil {
-        display: 100vw;
+        display: 10vw;
+    }
+
+    .container {
+        padding: 0 !important;
     }
 }
 
