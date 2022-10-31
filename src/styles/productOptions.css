@@ -60,19 +60,6 @@ input[type="radio"] {
     vertical-align: middle;
 }
 
-.color-1 {
-    background: red;
-}
-
-.color-2 {
-    background: black;
-}
-
-.color-3 {
-    background: white;
-    border: 0.5px solid #b0b0b0;
-}
-
 .productColor {
     border-top: 1px solid rgb(234, 234, 234);
     border-bottom: 1px solid rgb(234, 234, 234);
@@ -84,7 +71,6 @@ input[type="radio"] {
 .productSize {
     border-bottom: 1px solid rgb(234, 234, 234);
     padding: 2vh 0;
-
 }
 
 #inputTalla {
@@ -93,11 +79,13 @@ input[type="radio"] {
     font-size: 0.8rem;
     padding: 5px 8px;
     margin-right: 10px;
+    margin-bottom: 7px;
     border: 2px solid #e0e0e0;
     display: inline-block;
-    width:fit-content;
     text-align: center;
     cursor: pointer;
+    width: 2vw;
+
 }
 
 .productSize input:checked + #inputTalla {
@@ -119,9 +107,7 @@ input[type="radio"] {
 .totalPrice {
     justify-content: space-between;
     border-bottom: 1px solid rgb(234, 234, 234);
-    padding: 2vh 0 6vh 0;
-
-
+    padding: 2vh 0 2vh 0;
 }
 .amountProducts .parrafo {
 	background: none;
@@ -168,6 +154,7 @@ input[type="radio"] {
     font-family: Imported;
     border: none;
     cursor: pointer;
+    margin-bottom: 2vh;
 }
 
 .favorite {
@@ -195,7 +182,7 @@ input[type="radio"] {
     color: rgb(169, 169, 169);
     font-size: 0.8rem;
     font-family: Imported;
-    margin-top: 3vh;
+    margin-top: 12vh;
     width: 25vw;
 }
 
@@ -204,7 +191,7 @@ input[type="radio"] {
 /* MOBILE 320px — 480px*/
 @media screen and (max-width: 480px) {
     .productDescription {
-        width: 80vw;
+        width: 85vw;
         margin: 0;
         margin-left: 0;
     }
@@ -224,13 +211,34 @@ input[type="radio"] {
     .buttons {
         margin: 5vh 0 0.5vh 0 !important;
     }
-    button {
+    span.submitButtons {
         margin-bottom: 1.5vh !important;
+    }
+    .productSize.fila {
+        align-items: initial;
+    }
+    .opcionesTalla {
+        display: inline-block !important;
+        width: 85vw;
+    }
+    #inputTalla {
+        margin-bottom: 10px;
+        width: 8vw;
+    }
+    p.parrafo {
+        margin-top: 0 !important;
+    }
+
+    .totalPrice {
+        padding: 2vh 0 0.5vh 0;
     }
 }
 
 /* TABLET 481px — 768px */
 @media screen and (min-width: 481px) and (max-width: 768px) {
+    .productSize.fila {
+        align-items: initial;
+    }
     .productOptions {
         width: 100%;
     }
@@ -247,12 +255,27 @@ input[type="radio"] {
     .buttons {
         margin: 5vh 0 0.5vh 0 !important;
     }
-    button {
+    span.submitButtons {
         margin-bottom: 1.5vh !important;
     }
     .productDescription {
-        width: 45vw;
+        width: 43vw;
     }
+    .productSize.fila {
+        align-items: initial;
+    }
+    .opcionesTalla {
+        display: inline-block !important;
+        width: 100vw;
+    }
+    #inputTalla {
+        margin-bottom: 10px;
+        width: 5.3vw;
+    }
+    p.parrafo {
+        margin-top: 0 !important;
+    }
+    
 
 }
 

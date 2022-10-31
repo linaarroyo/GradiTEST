@@ -6,23 +6,24 @@ import thirdProductImage from "../img/tenis810-03.jpg";
 import fourthProductImage from "../img/tenis810-04.jpg";
 import ImgCarousel  from "./ImgCarousel";
 
-const ProductImages = () => {
+const ProductImages = (props) => {
+    const {productJSON} = props;
     return (
-    <>
-    <div className="envoltura envolturaImgs escritorio col-sm-6">
-        <div>
-            <img src={firstProductImage} width="810px" height="810px"/>
+    <div className="col-50">
+        <div className="envoltura envolturaImgs escritorio bloque canaleta">
+            <div>
+                <img src={productJSON.images[0]} width="600px" height="600px"/>
+            </div>
+            <div>
+                <img src={productJSON.images[1]} width="180px" height="180px"/>
+                <img src={productJSON.images[2]} width="180px" height="180px"/>
+                <img src={productJSON.images[3]} width="180px" height="180px"/>
+            </div>
         </div>
-        <div>
-            <img src={secondProductImage} width="270px" height="270px"/>
-            <img src={thirdProductImage} width="270px" height="270px"/>
-            <img src={fourthProductImage} width="270px" height="270px"/>
+        <div className="envoltura movil bloque canaleta">
+            <ImgCarousel productJSON = {productJSON}/>
         </div>
     </div>
-    <div className="envoltura movil col-sm-6">
-        <ImgCarousel/>
-    </div>
-    </>
     )
 }
 

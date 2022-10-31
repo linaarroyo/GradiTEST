@@ -1,5 +1,8 @@
 import React, {useState} from "react";
+import toast from "react-hot-toast";
 import '../styles/productOptions.css';
+import { Toaster } from 'react-hot-toast';
+import { map } from 'lodash';
 
 function formatNumber(number) {
     return new Intl.NumberFormat("EN-US", {
@@ -7,50 +10,58 @@ function formatNumber(number) {
         currency: 'USD',
     }).format(number);
 }
-const ProductOptions = () => {
-    const [counter, setCounter] =  useState(1);
-    const productDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    let price = 285;
 
+const ProductOptions = (props) => {
+    const {productJSON} = props;
+    const [counter, setCounter] =  useState(1);
+    const colores = Array.from(new Set(map(productJSON.variants, objeto => objeto.option1)));
+    let tallas = {};
+    let price = productJSON.price;
+    price = price.toString().substring(0, price.toString().length - 2);
+    let descripcion = productJSON.description;
+    for(let indice in colores)
+    {
+        const color = colores[indice];
+        tallas[color] = map(productJSON.variants, objeto => {if(objeto.option1 == color) return objeto.option2;});
+        tallas[color] = tallas[color].filter(function( element ) {
+            return element !== undefined;
+         });
+    }
+    const [colorSeleccionado, setColorSeleccionado] =  useState(colores[0]);
     return(
         <div className="productOptions">
-            <form>
+            <Toaster/>
+            <form >
                 {/*SELECT COLOR*/}
                 <div className="optionSection productColor">
                     <p className="parrafo">Color:</p>
-                    <label for="red">
-                        <input type="radio" name="color" id="red"/>
-                        <span className="color-1 inputColor"/>
-                    </label>
-                    <label for="black">
-                        <input type="radio" name="color" id="black"/> 
-                        <span className="color-2 inputColor"/>
-                    </label>
-                    <label for="white">
-                        <input type="radio" name="color" id="white"/> 
-                        <span className="color-3 inputColor"/>
-                    </label>
+                    {map(colores, color => {
+                        return (
+                            <label for={color} key={color}>
+                                <input type="radio" name="selector" id={color} onClick={evento => setColorSeleccionado(evento.target.id)}/>
+                                <span className="inputColor" style={{backgroundColor: color.toLowerCase()}}/>
+                            </label>
+                        );
+                    })}
                 </div>
                 {/*SELECT SIZE*/}
-                <div className="optionSection productSize">
+                <div className="optionSection productSize fila">
                     <p className="parrafo">Size:</p>
-                    <label for="7">
-                        <input type="radio" name="size" id="7"/>
-                        <span id="inputTalla">7</span>
-                    </label>
-                    <label for="7.5">
-                        <input type="radio" name="size" id="7.5"/>
-                        <span id="inputTalla">7.5</span>
-                    </label>
-                    <label for="8">
-                        <input type="radio" name="size" id="8"/>
-                        <span id="inputTalla">8</span>
-                    </label>
+                    <div className="opcionesTalla">
+                        {map(tallas[colorSeleccionado], talla => {
+                            return (
+                            <label for={talla} key={talla}>
+                                <input type="radio" name="size" id={talla}/>
+                                <span id="inputTalla">{talla}</span>
+                            </label>
+                        );
+                        })}
+                    </div>
                 </div>
                 {/*SELECT AMOUNT*/}
                 <div className="totalPrice fila" style={{height:"50px"}}>
                     <div className="amountProducts fila">
-                        <p className="parrafo" onClick={() => setCounter((prevCount) => prevCount - 1)}>-</p>
+                        <p className="parrafo" onClick={() => setCounter((prevCount) => prevCount > 1 ? prevCount - 1 : 1)}>-</p>
                         <p className="parrafo">{counter}</p>
                         <p className="parrafo" onClick={() => setCounter((prevCount) => prevCount + 1)}>+</p>
                     </div>
@@ -66,12 +77,12 @@ const ProductOptions = () => {
                     </div>
                 </div>
                 {/*SUBMIT FORM*/}
-                <div className="row gx-1 buttons">
-                    <button className="submitButtons favorite col-md-6">Add to favourite</button>
-                    <button className="submitButtons cart col-md-6">Add to cart</button>
+                <div className="buttons">
+                    <span className="submitButtons favorite col-50" onClick={() => toast.success(`${productJSON.title} was added to list.`)}>Add to favourite</span>
+                    <span className="submitButtons cart col-50" onClick={() => toast.success(`${productJSON.title} was added to cart.`)}>Add to cart</span>
                 </div>
                 <p className="productDescription parrafo">
-                    {productDescription}
+                    <div dangerouslySetInnerHTML={{__html: descripcion}}/>
                 </p>
             </form>
         </div>

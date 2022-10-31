@@ -29,12 +29,20 @@
     .price .vinculo {
         width: 60vw;
     }
+
+    #productInfo {
+        padding-left: 0vw !important;
+        padding: 2vw 2vh;
+        width: 85vw !important;
+    }
+    
 }
 
 /* TABLET 481px — 768px */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
     #productInfo {
-        padding-left: 3vw !important;
+        padding-left: 0vw !important;
+        width: 43vw;
     }
 }
 

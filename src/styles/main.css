@@ -4,13 +4,18 @@
 }
 
 html {
-    padding: 2vh 8.6vw;
+    padding: 2vh 4vw;
     font-family: Imported;
     width: 100vw;
 }
 
 .container {
     margin: 0 !important;
+}
+
+span.submitButtons { 
+    display: flex; 
+    justify-content: center;
 }
 
 .parrafo {
@@ -26,20 +31,29 @@ html {
     flex-direction: row;
 }
 
+.col-50 {
+    width: 48%;
+    float: left;
+}
 /* Media queries */
 
 /* MOBILE 320px — 480px*/
 @media screen and (max-width: 480px) {  
     html {
-        padding: 2vh 9vw !important;
+        padding: 2vh 4vw !important;
+    }
+    .col-50 {
+        width: 90%;
+        float: none;
     }
 }
 
 /* TABLET 481px — 768px */
 @media screen and (max-width: 768px) {
     html {
-        padding: 2vh 4vw;
+        padding: 2vh 0;
     }
+
 }
 
 /* SMALL SCREENS 769px — 1024 LAPTOP*/ 

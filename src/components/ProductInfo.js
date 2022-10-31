@@ -3,11 +3,14 @@ import '../styles/productInfo.css';
 import ProductDetails from "./ProductDetails.js";
 import ProductOptions from "./ProductOptions.js";
 
-const ProductInfo = () => {
+const ProductInfo = (props) => {
+    const {productJSON} = props;
     return (
-        <div className="envoltura envolturaInfo col-sm-6" id="productInfo" style={{paddingLeft:"8vw"}}>
-            <ProductDetails/>
-            <ProductOptions/>
+        <div className="col-50">
+            <div className="envoltura envolturaInfo" id="productInfo" style={{paddingLeft:"8vw"}}>
+                <ProductDetails productJSON = {productJSON}/>
+                <ProductOptions productJSON = {productJSON}/>
+            </div>
         </div>
     );
 }

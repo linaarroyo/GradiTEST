@@ -1,6 +1,9 @@
 .envoltura.movil {
     display: none;
 }
+.envolturaImgs {
+    margin-left: 10vw !important;
+}
 /* Media queries */
 /* Mobile 320px — 480px*/
 @media screen and (max-width: 480px) {
